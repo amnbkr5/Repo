@@ -13,7 +13,7 @@ jobs:
       - run: sudo apt install build-essential
       - run: gcc --version
       - run: |
-          sudo apt install arm-none-eabi-gcc
+          sudo apt-get install gcc-arm-none-eabi
           arm-none-eabi-gcc --version
       - run: gcc main.c -o amin.out
       - run: ./amin.out
