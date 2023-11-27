@@ -22,6 +22,7 @@ jobs:
       - name: Push changes
         if: steps.commit.outputs.push == 'true'
         uses: ad-m/github-push-action@master
-        github_token: ${{ secrets.GITHUB_TOKEN }}
+        with:
+           github_token: ${{ secrets.GITHUB_TOKEN }}
 
 
