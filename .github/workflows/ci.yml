@@ -5,10 +5,6 @@ jobs:
     container:
       image: stronglytyped/arm-none-eabi-gcc:latest
     steps:
-      - name: Checkout the repository
-        uses: actions/checkout@v3
-        with:
-          submodules: "true"
       - run: ls -a
       - run: sudo apt install build-essential
       - run: gcc --version
