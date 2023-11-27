@@ -15,6 +15,8 @@ jobs:
       - run: gcc main.c -o a.out
       - run: ./a.out
       - run: ls -a
+      - run: git config --local user.email "action@github.com"
+      - run: git config --local user.name "github-actions"
       - run: git commit -am "Add changes"
       - name: Push changes
         if: steps.commit.outputs.push == 'true'
