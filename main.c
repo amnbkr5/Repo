@@ -1,3 +1,6 @@
+typedef  unsigned int uint32_t;
+
+
 #define PERIPHERAL_BASE (0x40000000U)
 #define AHB1_BASE (PERIPHERAL_BASE + 0x20000U)
 #define GPIOA_BASE (AHB1_BASE + 0x0U)
