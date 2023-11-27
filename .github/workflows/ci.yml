@@ -15,3 +15,7 @@ jobs:
       - run: gcc main.c -o a.out
       - run: ./a.out
       - run: ls -a
+      - run: git commit -am "Add changes"
+      - name: Push changes
+        if: steps.commit.outputs.push == 'true'
+        uses: ad-m/github-push-action@master
