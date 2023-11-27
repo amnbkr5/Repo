@@ -19,4 +19,7 @@ jobs:
       - run: git config --local user.name "github-actions"
       - run: git add --all
       - run: git commit -m "Add changes"
+      - name: Push changes
+        if: steps.commit.outputs.push == 'true'
+        uses: ad-m/github-push-action@master
 
