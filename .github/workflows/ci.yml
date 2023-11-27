@@ -15,7 +15,9 @@ jobs:
           arm-none-eabi-gcc --version
       # - run: gcc main.c -o amin.out
       # - run: ./amin.out
-       
+      - run: sudo apt install docker.io
+      
+      - run: docker --version
       - run: arm-none-eabi-gcc main.c startup_stm32f401ccux.c -T STM32F401CCUX_FLASH.ld -o blink.elf -mcpu=cortex-m4 -mthumb -nostdlib
       - run: ls -a
       # - run: git config --local user.email "action@github.com"
