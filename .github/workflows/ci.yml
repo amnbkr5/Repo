@@ -3,10 +3,10 @@ jobs:
   build_and_static_analysis:
     runs-on: ubuntu-latest
     container:
-      image: stronglytyped/arm-none-eabi-gcc:latest
+      image: msalau/rl78-elf-gcc:latest
     steps:
       - run: ls -a
-      - run: arm-none-eabi-gcc --version
+      - run: ccrl -V
           # sudo apt-get install gcc-arm-none-eabi
           
       - run: arm-none-eabi-gcc main.c startup_stm32f401ccux.c -T STM32F401CCUX_FLASH.ld -o blink.elf -mcpu=cortex-m4 -mthumb -nostdlib
