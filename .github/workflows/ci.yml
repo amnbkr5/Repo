@@ -2,6 +2,8 @@ on: [push]
 jobs:
   build_and_static_analysis:
     runs-on: ubuntu-latest
+    container:
+      image: alelec/gcc-arm-none-eabi
     steps:
       - name: Checkout the repository
         uses: actions/checkout@v3
@@ -11,13 +13,8 @@ jobs:
       - run: sudo apt install build-essential
       - run: gcc --version
       - run: |
-          sudo apt-get install gcc-arm-none-eabi
+          # sudo apt-get install gcc-arm-none-eabi
           arm-none-eabi-gcc --version
-      # - run: gcc main.c -o amin.out
-      # - run: ./amin.out
-      - run: sudo apt install docker.io
-      
-      - run: docker --version
       - run: arm-none-eabi-gcc main.c startup_stm32f401ccux.c -T STM32F401CCUX_FLASH.ld -o blink.elf -mcpu=cortex-m4 -mthumb -nostdlib
       - run: ls -a
       # - run: git config --local user.email "action@github.com"
