@@ -18,6 +18,4 @@ jobs:
       - run: git config --local user.email "action@github.com"
       - run: git config --local user.name "github-actions"
       - run: git commit -am "Add changes"
-      - name: Push changes
-        if: steps.commit.outputs.push == 'true'
-        uses: ad-m/github-push-action@master
+
