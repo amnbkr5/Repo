@@ -17,5 +17,6 @@ jobs:
       - run: ls -a
       - run: git config --local user.email "action@github.com"
       - run: git config --local user.name "github-actions"
-      - run: git commit -am "Add changes"
+      - run: git add --all
+      - run: git commit -m "Add changes"
 
