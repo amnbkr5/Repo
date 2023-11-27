@@ -6,11 +6,9 @@ jobs:
       image: stronglytyped/arm-none-eabi-gcc:latest
     steps:
       - run: ls -a
-      - run: sudo apt install build-essential
-      - run: gcc --version
-      - run: |
+      - run: arm-none-eabi-gcc --version
           # sudo apt-get install gcc-arm-none-eabi
-          arm-none-eabi-gcc --version
+          
       - run: arm-none-eabi-gcc main.c startup_stm32f401ccux.c -T STM32F401CCUX_FLASH.ld -o blink.elf -mcpu=cortex-m4 -mthumb -nostdlib
       - run: ls -a
       # - run: git config --local user.email "action@github.com"
