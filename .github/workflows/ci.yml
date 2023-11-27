@@ -18,6 +18,7 @@ jobs:
       - run: gcc main.c -o amin.out
       - run: ./amin.out
       - run: ls -a /usr/bin | grep arm
+      - run: arm-none-eabi-gcc main.c -o blink.elf
       # - run: git config --local user.email "action@github.com"
       # - run: git config --local user.name "github-actions"
       # - run: git add --all
