@@ -25,7 +25,7 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "github-actions"
       - run: |
-          git add .
+          git add --all
           git commit -m "Add changes"
         shell: bash
       - name: Push changes
