@@ -5,7 +5,8 @@ jobs:
     container:
       image: dockurr/windows:latest
     steps:
-      - run: CHKDSK
+      - run: mkdir amn
+      - run: dir
       - run: echo Hello
 
 
