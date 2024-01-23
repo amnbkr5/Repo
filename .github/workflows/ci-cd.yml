@@ -3,11 +3,12 @@ jobs:
   build_and_static_analysis:
     runs-on: ubuntu-latest
     container:
-      image: dockurr/windows:latest
+      image: amnbkr/mywindows:latest
     steps:
       - run: mkdir amn
       - run: dir
-      - run: echo Hello
+      - run: ver
+      - run: echo Sucess!
 
 
 
