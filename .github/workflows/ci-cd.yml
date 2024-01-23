@@ -3,7 +3,7 @@ jobs:
   build_and_static_analysis:
     runs-on: ubuntu-latest
     container:
-      image: mcr.microsoft.com/windows/nanoserver:ltsc2019
+      image: dockurr/windows:latest
     steps:
       - run: dir
       - run: echo Hello
