@@ -5,9 +5,6 @@ jobs:
     # container:
     #   image: amnbkr/mywindows:latest
     steps:
-      - run: mkdir amn
-      - run: dir
-      - run: ver
       - run: echo Sucess!
       - run: docker --help
 
