@@ -2,13 +2,14 @@ on: [push]
 jobs:
   build_and_static_analysis:
     runs-on: ubuntu-latest
-    container:
-      image: amnbkr/mywindows:latest
+    # container:
+    #   image: amnbkr/mywindows:latest
     steps:
       - run: mkdir amn
       - run: dir
       - run: ver
       - run: echo Sucess!
+      - run: docker --help
 
 
 
